@@ -1,0 +1,86 @@
+@import "globals/vars.scss";
+
+$root: ".header";
+
+#{$root} {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: $size--max-width--tablet--breakpoint) {
+  
+  }
+
+  div {
+    display: flex;
+  }
+
+  &__logo {
+    cursor: pointer;
+    img {
+      height: 22px;
+    }
+  }
+
+  &__buttons {
+    gap: 87px;
+
+    @media screen and (max-width: $size--max-width--tablet--breakpoint) {
+      gap: 50px;
+    }
+  }
+
+  &__navbar {
+    gap: 48px;
+    align-items: center;
+
+    div {
+      cursor: pointer;
+    }
+    div:hover {
+      color: #fff;
+    }
+
+    @media screen and (max-width: $size--max-width--tablet--breakpoint) {
+      gap: 20px;
+
+      div {
+        font-size: 10px;
+      }
+    }
+
+    @media screen and (max-width: $size--max-width--smalltablet--breakpoint) {
+      display: none !important;
+    }
+  }
+
+  &__login {
+    gap: 13px;
+    align-items: center;
+
+    div {
+      cursor: pointer;
+    }
+    div:hover {
+      color: #fff;
+    }
+  }
+
+  &__signup {
+    padding: 8.636px 13.818px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: 0.864px solid #d66567;
+    background: #bc4749;
+    width: 105px;
+
+    @media screen and (max-width: $size--max-width--smalltablet--breakpoint) {
+      width: auto;
+    }
+
+    &:hover {
+      background: #d03e40;
+    }
+  }
+}

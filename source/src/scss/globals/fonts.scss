@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'MailSans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/MailSansRegular.woff2') format('woff2-variations'),
+  url('../fonts/MailSansRegular.woff2') format('woff2'),
+  url('../fonts/MailSansRegular.woff') format('woff'),
+  url('../fonts/MailSansRegular.ttf') format('truetype');
+  src: url('../fonts/MailSansRegular.woff2') format('woff2' supports variations)
+}
+
+@font-face {
+  font-family: 'MailSans';
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/MailSansMedium.woff2') format('woff2-variations'),
+  url('../fonts/MailSansMedium.woff2') format('woff2'),
+  url('../fonts/MailSansMedium.woff') format('woff'),
+  url('../fonts/MailSansMedium.ttf') format('truetype');
+  src: url('../fonts/MailSansMedium.woff2') format('woff2' supports variations)
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: local('Mazzard H Medium'), local('Mazzard-H-Medium'),
+      url('../fonts/MazzardH-Medium.woff2') format('woff2'),
+      url('../fonts/MazzardH-Medium.woff') format('woff'),
+      url('../fonts/MazzardH-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Mazzard';
+  src: local('Mazzard H SemiBold'), local('Mazzard-H-SemiBold'),
+      url('../fonts/MazzardH-SemiBold.woff2') format('woff2'),
+      url('../fonts/MazzardH-SemiBold.woff') format('woff'),
+      url('../fonts/MazzardH-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+

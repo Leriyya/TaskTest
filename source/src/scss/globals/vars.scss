@@ -1,0 +1,35 @@
+@use 'sass:math';
+
+$size--max-width--desktop: 1440px;
+// $size--max-width--desktop--breakpoint: calc($size--max-width--desktop - 1px);
+$size--max-width--desktop--breakpoint: 1040px;
+$size--max-width--tablet--breakpoint: 890px;
+$size--max-width--smalltablet--breakpoint: 650px;
+$size--max-width--mobile: 360px;
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function responsive($desktop, $mobile) {
+  @return calc($mobile + (strip-unit($desktop) - strip-unit($mobile)) * (100vw - $size--max-width--mobile) / (strip-unit($size--max-width--desktop--breakpoint) - strip-unit($size--max-width--mobile)));
+}
+
+$size--padding--container: 50px;
+$size--padding--container--mobile: 20px;
+$size--padding--container--responsive: responsive($size--padding--container, $size--padding--container--mobile);
+
+$color--background: #141414;
+$color--foreground: rgba(255, 255, 255, 0.80);;
+
+$font-family--accent: 'Inter', sans-serif;
+$font-family--accent2: 'Mazzard', sans-serif;
+
+$font-weight--headline: 500;
+
+$font-size--title: 41px;
+
